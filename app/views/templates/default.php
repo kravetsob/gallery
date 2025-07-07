@@ -9,7 +9,6 @@
         <title><?= (isset($title) ? $title . ' | ' : '') . SITE_NAME ?></title>
     </head>
     <body>
-        <h1>Gallery</h1>
         <?php include_once $this->getViewPath($viewName);?>
         <footer>&copy2025</footer>
         <script src="/js/script.js" defer></script>
