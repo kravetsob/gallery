@@ -20,7 +20,6 @@ function reset() {
     if (footer) footer.classList.remove('hide');
 }
 
-
 function clickOnArrows(){
     document.querySelector('.left-arrow').addEventListener('click', function (){
         if(currentIndex === 0){
