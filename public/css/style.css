@@ -109,3 +109,13 @@ input[type="submit"]:hover {
 #upload-errors {
     background-color: #f44336;
 }
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+}
