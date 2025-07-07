@@ -1,0 +1,111 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 2em;
+    padding: 0.3em;
+    cursor: pointer;
+}
+.left-arrow {
+    left: 10px;
+}
+.right-arrow {
+    right: 10px;
+}
+.hide {
+    display: none;
+}
+.photo-container.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.photo-container.fullscreen img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    border-radius: 0;
+}
+.photo-container {
+    width: 1000px;
+    height: 650px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+.photo-container img {
+    width: 1000px;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.upload {
+    max-width: 336px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+input[type="file"] {
+    margin-bottom: 15px;
+}
+.upload input[type="submit"] {
+    padding: 8px 10px;
+    background-color: #606060;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #313131;
+}
+.errors {
+    font-weight: bold;
+    color: #e74c3c;
+}
+.errors > ul > li{
+    list-style-type: none;
+}
+.errors > ul {
+    padding: 0;
+}
+.message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 40px 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+    opacity: 0.95;
+}
+#upload-success {
+    background-color: #53b658;
+}
+#upload-errors {
+    background-color: #f44336;
+}
