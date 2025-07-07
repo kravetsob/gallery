@@ -25,7 +25,7 @@ class IndexController
         session_start();
 
         $photos = $this->indexModel->all();
-
+        $photoNamesJson = json_encode(array_column($photos ?? [], 'name'));
         $success = $_SESSION['upload_success'] ?? false;
         $errors = $_SESSION['upload_errors'] ?? [];
 
@@ -36,6 +36,7 @@ class IndexController
             'photos' => $photos,
             'success' => $success,
             'errors' => $errors,
+            'photoNamesJson' => $photoNamesJson,
         ]);
     }
 
@@ -57,9 +58,11 @@ class IndexController
         }
 
         $photos = $this->indexModel->all();
+        $photoNamesJson = json_encode(array_column($photos ?? [], 'name'));
         $this->view->render('index', [
             'title' => 'Home',
             'photos' => $photos,
+            'photoNamesJson' => $photoNamesJson,
         ]);
     }
 
