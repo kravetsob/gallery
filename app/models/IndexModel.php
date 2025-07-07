@@ -15,6 +15,10 @@ class IndexModel
         }
     }
 
+    /**
+     * Return all photos from DB
+     * @return array|bool
+     */
     public function all(): array|bool
     {
         $statement = [];
@@ -26,6 +30,11 @@ class IndexModel
         return false;
     }
 
+    /**
+     * Add file path into DB
+     * @param $photo
+     * @return bool
+     */
     public function add($photo)
     {
         $query = "INSERT INTO photos (name) VALUES (?)";

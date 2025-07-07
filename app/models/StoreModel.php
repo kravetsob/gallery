@@ -4,10 +4,16 @@ namespace app\models;
 
 use app\validators\ImageValidator;
 
-class storeModel
+class StoreModel
 {
+    /**
+     * @var ImageValidator
+     */
     protected ImageValidator $imageValidator;
 
+    /**
+     * storeModel constuctor
+     */
     public function __construct()
     {
         $this->imageValidator = new ImageValidator();
